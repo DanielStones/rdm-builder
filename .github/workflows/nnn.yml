@@ -99,7 +99,10 @@ jobs:
 #        python-version: '3.7'
 #        architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
 
-    # install python3
+    # install python3  
+    # 需要关联当前版本的 python
+    # https://docs.github.com/en/actions/reference/software-installed-on-github-hosted-runners 查看 machine 环境
+    # https://github.com/actions/virtual-environments/blob/main/images/win/Windows2019-Readme.md
     - name: install python37
       shell: cmd
       run: mklink /d C:\Python37-x64 C:\hostedtoolcache\windows\python\3.7.9\x64
